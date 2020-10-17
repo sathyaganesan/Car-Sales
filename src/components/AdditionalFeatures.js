@@ -1,5 +1,6 @@
 import React from 'react';
-import AdditionalFeature from './AdditionalFeature';
+import {useSelector} from 'react-redux';
+import {AddedReducer} from './AddedFeature';
 
 const AdditionalFeatures = props => {
   return (
