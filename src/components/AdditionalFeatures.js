@@ -1,6 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {AddedReducer} from './AddedFeature';
+import  AdditionalFeature  from './AdditionalFeature';
 
 const AdditionalFeatures = props => {
   return (
@@ -9,7 +8,10 @@ const AdditionalFeatures = props => {
       {props.additionalFeatures.length ? (
         <ol type="1">
           {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature
+              key={item.id}
+              addfeature={props.addfeature}
+              feature={item} />
           ))}
         </ol>
       ) : (
