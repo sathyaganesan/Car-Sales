@@ -2,6 +2,7 @@ import React from 'react';
 import  AdditionalFeature  from './AdditionalFeature';
 
 const AdditionalFeatures = props => {
+  console.log("AdditionalFeatures", props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -10,7 +11,6 @@ const AdditionalFeatures = props => {
           {props.additionalFeatures.map(item => (
             <AdditionalFeature
               key={item.id}
-              addfeature={props.addfeature}
               feature={item} />
           ))}
         </ol>

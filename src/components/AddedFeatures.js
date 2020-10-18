@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import AddedFeature from './AddedFeature';
 
 const AddedFeatures = props => {
+  console.log("AddedFeatures", props);
   return (
     <div className="content">
       <h6>Added features:</h6>
@@ -11,7 +12,6 @@ const AddedFeatures = props => {
           {props.car.features.map((item) => (
             <AddedFeature
               key={item.id}
-              removeFeature={props.removeFeature}
               feature={item} />
           ))}
         </ol>
