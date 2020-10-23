@@ -16,5 +16,6 @@ const AddedFeature = (props) => {
     </li>
   );
 };
+
 const mapDispatchToProps = {removeFeature };
 export default connect(null, mapDispatchToProps)(AddedFeature);

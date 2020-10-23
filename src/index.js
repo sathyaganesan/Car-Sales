@@ -7,13 +7,10 @@ import 'bulma/css/bulma.css';
 import './styles.scss';
 import { Reducer } from './Reducers/Reducer';
 
-const store = createStore(Reducer)  
+const store = createStore(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store = {store}>
         <App />
     </Provider >
     , rootElement);
-
-
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
